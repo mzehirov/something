@@ -1,3 +1,3 @@
 # something
 
-hello everyone
+hello
