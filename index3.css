@@ -1,0 +1,194 @@
+:root {
+    /* Colors */
+    --gray-color: #4f5056;
+    --white-color: #ffffff;
+    --blue-color: #24282f;
+    --black-color: #000000;
+    --red-color: #9F1F1F;
+    
+    /* Fonts */
+    --primary-font: 'Jura';
+    --secondary-font: 'Montserrat';
+  
+    /* Sizes */
+    --base-font-size: 16px;
+    --h1-font-size: 50px;
+    --h2-font-size: 32px;
+    --sub-font-size: 20px;
+    --body-font-size: 30px;
+  }
+
+
+/* Body */
+
+
+.contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+}
+
+
+/* Container 1*/
+
+.container1 {
+    width: 80%; /* Adjust based on your layout */
+    height: 209px; /* Adjust to fit your images appropriately */
+    padding: 126px 0 30px 0; /* Adjust this value to match the height of your header */
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Add this to support absolute positioning of child elements */
+    border-left: #000000 solid 2px;
+    border-right: #000000 solid 2px;
+}
+
+.loop-image1 img {
+    width: 250px; /* Adjust based on your image size */
+    height: 165px;
+    padding: 20px;
+    border: 2px solid var(--black-color);
+    border-radius: 10px;
+    background-color: #e6e6e6;
+}
+
+#image-container1 {
+  width: 100%;
+  margin-bottom: 240px;
+  display: flex;
+  white-space: nowrap;
+  position: relative; /* Add this to support absolute positioning of child elements */
+}
+
+.loop-image1 {
+  width: 290px; /* Adjust based on your image size */
+  height: auto;
+  padding: 0 100px 0 100px;
+  display: inline-block;
+  position: absolute; /* Update positioning to absolute for smooth animation */
+}
+
+/* Welcome */
+
+.welcome {
+  font-size: var(--h1-font-size);
+  font-family: JetBrains Mono, monospace;
+  font-weight: bold;
+  width: 80%;
+  height: 56px;
+  padding: 30px 0 30px 0;
+  border-left: #000000 solid 2px;
+  border-right: #000000 solid 2px;
+  display: flex;
+  justify-content: center;
+  white-space: pre; /* Preserves spaces and line breaks */
+  overflow: hidden; /* Keeps the container size constant even if content changes */
+  }
+  
+  .keyword, .argument {
+    display: inline;
+  }
+  
+  .keywordWhite {
+    color: #000000;
+  }
+  
+  .keywordYellow {
+    color: #766d02;
+  
+  }
+
+  .keywordBlue {
+    color: #004274;
+  }
+  
+  .keywordPar {
+    color: #ffcb22;
+  }
+  
+  .argument {
+    color: #d78800;
+  }
+
+/* Container 2 */
+
+.container2 {
+    width: 80%; /* Adjust based on your layout */
+    height: 209px; /* Adjust to fit your images appropriately */
+    overflow: hidden; /* Hide overflow */
+    padding: 30px 0 30px 0; /* Adjust this value to match the height of your header */
+    display: flex;
+    white-space: nowrap;
+    position: relative; /* Add this to support absolute positioning of child elements */
+    border-left: #000000 solid 2px;
+    border-right: #000000 solid 2px;
+  }
+
+.loop-image2 img {
+    width: 250px; /* Adjust based on your image size */
+    height: 165px;
+    padding: 20px;
+    border: 2px solid var(--black-color);
+    border-radius: 10px;
+    background-color: #e6e6e6;
+}
+
+#image-container2 {
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 240px;
+    position: relative; /* Add this to support absolute positioning of child elements */
+}
+
+.loop-image2 {
+    width: 290px; /* Adjust based on your image size */
+    height: auto;
+    display: inline-block;
+    padding: 0 100px 0 100px;
+    position: absolute; /* Update positioning to absolute for smooth animation */
+}
+
+
+
+
+.pic {
+    width: 30%;
+    height: auto;
+    border-left: #000000 solid 2px;
+    background-color: var(--white-color);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(20px);
+  opacity: 0;
+  /* Ensure the element takes up space for the duration of the animation */
+  visibility: hidden;
+  /* Apply the animation */
+  animation: slideUp 3s forwards;
+}
+
+.button {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-size: 20px;
+    font-family: var(--primary-font);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}

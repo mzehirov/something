@@ -1,0 +1,95 @@
+:root {
+  /* Colors */
+  --gray-color: #4f5056;
+  --white-color: #ffffff;
+  --blue-color: #24282f;
+  --black-color: #000000;
+  --red-color: #9F1F1F;
+  
+  /* Fonts */
+  --primary-font: 'Jura';
+  --secondary-font: 'Montserrat';
+
+  /* Sizes */
+  --base-font-size: 16px;
+  --h1-font-size: 80px;
+  --h2-font-size: 32px;
+  --sub-font-size: 20px;
+  --body-font-size: 30px;
+}
+
+/* Body */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+  }
+
+
+/* NavBar */
+#menu {
+  border-bottom: var(--gray-color) solid 4px;
+  font-family: var(--primary-font);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed; /*Fix position relative to the viewport*/ 
+  top: 0;  /*Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  right: 0; 
+  background-color: #ffffff;
+  z-index: 20;
+}
+
+#menu a {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+
+.logo {
+  display: flex;
+  height: auto;
+}
+
+.logo img {
+  max-width: 85px;
+}
+
+.menu-items {
+  display: flex;
+  
+}
+
+.menu-item {
+  font-size: var(--sub-font-size); 
+  position: relative;
+  margin: 6px;
+  padding: 6px 6px 6px 8px;
+}
+
+.menu-item::before, .menu-item::after {
+  content: '';
+  position: absolute;
+  transition: all 0.5s ease; /* Smooth transition for hover effects */
+}
+.menu-item::before {
+  left: 0;
+  bottom: 0;
+  height: 50%; /* Initial height for left border */
+  width: 3px; /* Width of the left border */
+  background-color: var(--blue-color); /* Color of the left border */
+}
+.menu-item::after {
+  left: 0;
+  bottom: 0;
+  width: 20%; /* Initial width for bottom border */
+  height: 3px; /* Height of the bottom border */
+  background-color: var(--blue-color); /* Color of the bottom border */
+}
+.menu-item:hover::before {
+  height: 100%; /* Full height for left border on hover */
+}
+.menu-item:hover::after {
+  width: 100%; /* Full width for bottom border on hover */
+}

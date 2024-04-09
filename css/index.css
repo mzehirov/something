@@ -1,0 +1,247 @@
+/*------------------------------------------------------------------------------------------------*/
+
+:root {
+    /* Colors */
+    --gray-color: #4f5056;
+    --white-color: #ffffff;
+    --blue-color: #24282f;
+    --black-color: #000000;
+    --red-color: #9F1F1F;
+    
+    /* Fonts */
+    --primary-font: 'Jura';
+    --secondary-font: 'Montserrat';
+  
+    /* Sizes */
+    --base-font-size: 16px;
+    --h1-font-size: 50px;
+    --h2-font-size: 32px;
+    --sub-font-size: 20px;
+    --body-font-size: 30px;
+  }
+
+/*------------------------------------------------------------------------------------------------*/
+
+/* Body */
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blue-color);
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/* Container 1*/
+.intro-container1 {
+    width: 80%; /* Adjust based on your layout */
+    height: 209px; /* Adjust to fit your images appropriately */
+    padding: 166px 0 30px 0; /* Adjust this value to match the height of your header */
+    display: flex;
+    white-space: nowrap;
+    position: relative; /* Add this to support absolute positioning of child elements */
+    overflow: hidden; /* Hide overflow */
+    border-left: #ffffff solid 2px;
+    border-right: #ffffff solid 2px;
+}
+
+.loop-image1 img {
+    width: 250px; /* Adjust based on your image size */
+    height: 165px;
+    border-radius: 10px;
+    padding: 18px;
+    border: 2px solid var(--white-color);
+}
+
+#image-container1 {
+    width: 100%;
+    margin-bottom: 240px;
+    display: flex;
+    white-space: nowrap;
+    position: relative; /* Add this to support absolute positioning of child elements */
+}
+
+.loop-image1 {
+    width: 290px; /* Adjust based on your image size */
+    height: auto;
+    padding: 0 100px 0 100px;
+    display: inline-block;
+    position: absolute; /* Update positioning to absolute for smooth animation */
+}
+
+/* Welcome */
+
+.greetings {
+    font-size: var(--h1-font-size);
+    font-family: JetBrains Mono, monospace;
+    font-weight: bold;
+    width: 80%;
+    height: 56px;
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    white-space: pre; /* Preserves spaces and line breaks */
+    overflow: hidden; /* Keeps the container size constant even if content changes */
+    border-left: #ffffff solid 2px;
+    border-right: #ffffff solid 2px;
+  }
+  
+  .keyword, .argument {
+    display: inline;
+  }
+  
+  .keywordWhite {
+    color: #ffffff;
+  }
+  
+  .keywordYellow {
+    color: #f5ec8c;
+  
+  }
+
+  .keywordBlue {
+    color: #84bce7;
+  }
+  
+  .keywordPar {
+    color: #ffcb22;
+  }
+  
+  .argument {
+    color: #d78800;
+  }
+
+/* Container 2 */
+
+.intro-container2 {
+    width: 80%; /* Adjust based on your layout */
+    height: 209px; /* Adjust to fit your images appropriately */
+    overflow: hidden; /* Hide overflow */
+    padding: 30px 0 70px 0; /* Adjust this value to match the height of your header */
+    display: flex;
+    white-space: nowrap;
+    position: relative; /* Add this to support absolute positioning of child elements */
+    border-left: #ffffff solid 2px;
+    border-right: #ffffff solid 2px;
+}
+
+.loop-image2 img {
+    width: 250px; /* Adjust based on your image size */
+    height: 165px;
+    border-radius: 10px;
+    padding: 18px;
+    border: 2px solid var(--white-color);
+}
+
+#image-container2 {
+    width: 100%;
+    margin-bottom: 240px;
+    display: flex;
+    white-space: nowrap;
+    position: relative; /* Add this to support absolute positioning of child elements */
+}
+
+.loop-image2 {
+    width: 290px; /* Adjust based on your image size */
+    height: auto;
+    padding: 0 100px 0 100px;
+    display: inline-block;
+    position: absolute; /* Update positioning to absolute for smooth animation */
+}
+
+.more-info {
+  width: 30%;
+  height: auto;
+  border-left: #ffffff solid 2px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(20px);
+opacity: 0;
+/* Ensure the element takes up space for the duration of the animation */
+visibility: hidden;
+/* Apply the animation */
+animation: slideUp 3s forwards;
+}
+
+.intro-button {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: 20px;
+  font-family: var(--primary-font);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.time-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.time-point {
+  padding: 5px;
+  border: 5px solid black;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.line {
+  height: 0;
+  border-top: 3px dashed #000000;
+  width: 10%; /* Adjust the width as needed */
+  margin: 5px 0; /* Spacing between lines and items */
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-time {
+  display: none; /* Hide content by default */
+  border: 1px solid #ddd;
+  padding: 50px;
+  margin-top: 150px;
+}
+
+/* Only for demonstration purposes */
+.time-img {
+  width: 200px;
+  height: auto;
+  padding-right: 50px;
+}
