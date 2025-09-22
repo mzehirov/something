@@ -28,7 +28,6 @@ body, html {
 
 /* NavBar */
 #menu {
-  border-bottom: var(--gray-color) solid 4px;
   font-family: var(--primary-font);
   display: flex;
   justify-content: space-between;
@@ -38,13 +37,13 @@ body, html {
   top: 0;  /*Align to the top of the viewport */
   left: 0; /* Align to the left of the viewport */
   right: 0; 
-  background-color: #ffffff;
+  background-color: #1f1f1f;
   z-index: 20;
 }
 
 #menu a {
   text-decoration: none;
-  color: var(--blue-color);
+  color: var(--white-color);
 }
 
 .logo {
@@ -78,14 +77,14 @@ body, html {
   bottom: 0;
   height: 50%; /* Initial height for left border */
   width: 3px; /* Width of the left border */
-  background-color: var(--blue-color); /* Color of the left border */
+  background-color: var(--white-color); /* Color of the left border */
 }
 .menu-item::after {
   left: 0;
   bottom: 0;
   width: 20%; /* Initial width for bottom border */
   height: 3px; /* Height of the bottom border */
-  background-color: var(--blue-color); /* Color of the bottom border */
+  background-color: var(--white-color); /* Color of the bottom border */
 }
 .menu-item:hover::before {
   height: 100%; /* Full height for left border on hover */
